@@ -37,25 +37,36 @@ Each line should contain two space-separated integers: `start` and `end`.
 ## Sample Input
 
 ```
-4
+10
 1 3
 2 6
 8 10
+9 12
 15 18
+16 20
+22 25
+24 26
+30 35
+33 38
 ```
 
 ## Sample Output
 
 ```
 1 6
-8 10
-15 18
+8 12
+15 20
+22 26
+30 38
 ```
 
 ## Explanation
 
 - The intervals `[1, 3]` and `[2, 6]` overlap, so they merge into `[1, 6]`.
-- The intervals `[8, 10]` and `[15, 18]` do not overlap with anything else, so they remain separate.
+- The intervals `[8, 10]` and `[9, 12]` overlap, so they merge into `[8, 12]`.
+- The intervals `[15, 18]` and `[16, 20]` overlap, so they merge into `[15, 20]`.
+- The intervals `[22, 25]` and `[24, 26]` overlap, so they merge into `[22, 26]`.
+- The intervals `[30, 35]` and `[33, 38]` overlap, so they merge into `[30, 38]`.
 
 ## Additional Test Cases
 
